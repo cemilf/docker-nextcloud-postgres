@@ -21,6 +21,11 @@ services:
     environment:
       - POSTGRES_HOST=db
       - REDIS_HOST=redis
+      - SMTP_HOST=mail.domain.com
+      - SMTP_PORT=587
+      - SMTP_NAME=user@domain.com
+      - SMTP_PASSWORD=password
+      - MAIL_FROM_ADDRESS=cloud@domain.com
     env_file:
       - db.env
     depends_on:
